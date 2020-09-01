@@ -1,0 +1,14 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedNamespace
+metadata:
+  name: default
+  namespace: default
+spec:
+  placement:
+    clusterSelector:
+      matchLabels: {}
+  template:
+    metadata:
+      labels:
+        multicluster-scheduler: enabled
+        istio-injection: enabled

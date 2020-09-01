@@ -1,0 +1,17 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedService
+metadata:
+  name: blob-storage
+spec:
+  placement:
+    clusterSelector: {}
+  template:
+    spec:
+      ports:
+      - port: 10000
+        protocol: TCP
+        targetPort: 10000
+      selector:
+        app: blob-storage
+      sessionAffinity: None
+      type: ClusterIP
