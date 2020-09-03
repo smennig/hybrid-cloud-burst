@@ -54,7 +54,7 @@ service/kubernetes     ClusterIP   10.0.0.1     <none>        443/TCP     7d6h
 Create a new machine learing job, which will be automatically scheduled in one cluster. 
 
 ```
-$ ./new-job.s
+$ ./k8s/new-job.sh
 job.batch/ml-job-6ymu created
 ```
 
